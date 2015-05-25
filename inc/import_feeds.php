@@ -91,7 +91,7 @@ function rssmi_fetch_all_feed_items( ) {
                                 'post_title' => html_entity_decode($item->get_title()),
                                 'post_content' => '',
 								'post_date' =>$post_date, 
-                                'post_status' => 'publish',
+                                'post_status' => 'draft',
                                 'post_type' => 'rssmi_feed_item'
                             );                
                             $inserted_ID = wp_insert_post( $feed_item, $wp_error );
@@ -283,7 +283,7 @@ function rssmi_fetch_feed_items( $post_id , $feed_total_fetch=10) {
                                 'post_title' => html_entity_decode($item->get_title()),
                                 'post_content' => '',
 								'post_date' =>$post_date, 
-                                'post_status' => 'publish',
+                                'post_status' => 'draft',
                                 'post_type' => 'rssmi_feed_item'
                             ); 
                				remove_action('save_post', 'rssmi_save_custom_fields');
