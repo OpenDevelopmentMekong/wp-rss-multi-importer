@@ -36,6 +36,9 @@ define( 'WP_RSS_MULTI_CSS', WP_RSS_MULTI_URL . trailingslashit( 'css' ), true );
 /* Set the constant path to the plugin's image directory. */
 define( 'WP_RSS_MULTI_IMAGES', WP_RSS_MULTI_URL . trailingslashit( 'images' ), true );
 
+/* Load the global settings files. */
+require_once( WP_RSS_MULTI_INC . 'global_settings.php' );
+
 /* Load the template functions file. */
 require_once( WP_RSS_MULTI_INC . 'template_functions.php' );
 
@@ -91,9 +94,6 @@ require_once( WP_RSS_MULTI_INC . 'diagnostics.php' );
 
 /* Load the export  files. */
 require_once( WP_RSS_MULTI_INC . 'export.php' );
-
-/* Load the global settings files. */
-require_once( WP_RSS_MULTI_INC . 'global_settings.php' );
 
 
 register_activation_hook( __FILE__, 'wp_rss_multi_importer_activate' );
