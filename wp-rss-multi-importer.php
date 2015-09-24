@@ -96,7 +96,6 @@ require_once( WP_RSS_MULTI_INC . 'diagnostics.php' );
 require_once( WP_RSS_MULTI_INC . 'export.php' );
 
 
-
 register_activation_hook( __FILE__, 'wp_rss_multi_importer_activate' );
 
 register_deactivation_hook(__FILE__, 'wp_rss_multi_deactivation_event');
